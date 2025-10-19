@@ -1,0 +1,2 @@
+<?php
+class Database{private static $h='localhost',$n='gadget_marketplace',$u='root',$p='';private static $c=null;public static function connect(){if(self::$c===null){try{self::$c=new PDO("mysql:host=".self::$h.";dbname=".self::$n,self::$u,self::$p,[PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_ASSOC]);}catch(PDOException $e){die('Connection failed: '.$e->getMessage());}}return self::$c;}}

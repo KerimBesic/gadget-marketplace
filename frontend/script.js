@@ -1,0 +1,1 @@
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const id=a.id.replace('Link','');document.querySelectorAll('.view').forEach(v=>v.hidden=true);document.getElementById(id).hidden=false;}));
